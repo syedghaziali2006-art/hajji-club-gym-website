@@ -1,5 +1,5 @@
 import React from 'react';
-import facilityImg from '../assets/facility-showcase.png';
+import facilityImg from '../assets/facility-showcase.webp';
 import { Sparkles, Clock, Check } from 'lucide-react';
 
 export default function FacilityShowcase() {
@@ -12,13 +12,16 @@ export default function FacilityShowcase() {
             borderRadius: '24px',
             overflow: 'hidden',
             boxShadow: 'var(--shadow-lg)',
-            border: '1px solid rgba(255, 77, 36, 0.25)',
+            border: '1px solid rgba(230, 62, 21, 0.25)',
           }}
         >
           {/* Main facility image */}
           <img
             src={facilityImg}
-            alt="Total Fit Dubai Facility & Machines"
+            alt="Haji Club Gym Facility and Workout Floor"
+            width="1200"
+            height="520"
+            loading="lazy"
             style={{
               width: '100%',
               maxHeight: '520px',

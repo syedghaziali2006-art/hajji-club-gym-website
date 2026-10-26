@@ -1,6 +1,6 @@
 import React from 'react';
-import aboutGym from '../assets/about-gym.png';
-import bodybuilderCutout from '../assets/bodybuilder-cutout.png';
+import aboutGym from '../assets/about-gym.webp';
+import bodybuilderCutout from '../assets/bodybuilder-cutout.webp';
 import { ArrowRight, CheckCircle2, Users, Award, Maximize2 } from 'lucide-react';
 
 export default function AboutUs() {
@@ -49,7 +49,10 @@ export default function AboutUs() {
             >
               <img
                 src={aboutGym}
-                alt="Total Fit Dubai Gym Interior"
+                alt="Haji Club Gym Interior and Workout Zones"
+                width="600"
+                height="469"
+                loading="lazy"
                 style={{
                   width: '100%',
                   height: 'auto',
@@ -81,7 +84,11 @@ export default function AboutUs() {
             >
               <img
                 src={bodybuilderCutout}
-                alt="Fitness Athlete"
+                alt=""
+                aria-hidden="true"
+                width="400"
+                height="400"
+                loading="lazy"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
                 onError={(e) => (e.target.style.display = 'none')}
               />
@@ -222,7 +229,7 @@ export default function AboutUs() {
                   >
                     {stat.label}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{stat.desc}</div>
+                  <div style={{ fontSize: '0.8rem', color: '#d1d5db' }}>{stat.desc}</div>
                 </div>
               ))}
             </div>

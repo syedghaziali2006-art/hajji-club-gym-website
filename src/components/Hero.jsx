@@ -1,6 +1,6 @@
 import React from 'react';
-import heroAthlete from '../assets/hero-athlete.png';
-import heroBg from '../assets/hero-bg.png';
+import heroAthlete from '../assets/hero-athlete.webp';
+import heroBg from '../assets/hero-bg.webp';
 import badgeSmall from '../assets/badge-124x44.png';
 import badgeVertical from '../assets/badge-29x131.png';
 import { ArrowRight, Flame, ShieldCheck, MapPin } from 'lucide-react';
@@ -16,31 +16,44 @@ export default function Hero() {
         paddingBottom: '5rem',
         display: 'flex',
         alignItems: 'center',
-        background: `radial-gradient(circle at 75% 30%, rgba(255, 77, 36, 0.15) 0%, rgba(17, 14, 16, 0.98) 70%), url(${heroBg}) center/cover no-repeat`,
+        background: `radial-gradient(circle at 75% 30%, rgba(230, 62, 21, 0.15) 0%, rgba(17, 14, 16, 0.98) 70%), url(${heroBg}) center/cover no-repeat`,
         overflow: 'hidden',
+        contain: 'paint',
       }}
     >
-      {/* Ambient background glow elements */}
+      {/* Ambient background glow elements isolated inside strict container */}
       <div
-        className="ambient-glow"
+        aria-hidden="true"
         style={{
-          top: '15%',
-          right: '10%',
-          width: '550px',
-          height: '550px',
-          background: 'radial-gradient(circle, rgba(255, 77, 36, 0.22) 0%, rgba(0,0,0,0) 70%)',
+          position: 'absolute',
+          inset: 0,
+          overflow: 'hidden',
+          pointerEvents: 'none',
+          zIndex: 0,
+          contain: 'strict',
         }}
-      />
-      <div
-        className="ambient-glow"
-        style={{
-          bottom: '5%',
-          left: '5%',
-          width: '400px',
-          height: '400px',
-          background: 'radial-gradient(circle, rgba(255, 77, 36, 0.12) 0%, rgba(0,0,0,0) 70%)',
-        }}
-      />
+      >
+        <div
+          className="ambient-glow"
+          style={{
+            top: '15%',
+            right: '10%',
+            width: '550px',
+            height: '550px',
+            background: 'radial-gradient(circle, rgba(230, 62, 21, 0.22) 0%, rgba(0,0,0,0) 70%)',
+          }}
+        />
+        <div
+          className="ambient-glow"
+          style={{
+            bottom: '5%',
+            left: '5%',
+            width: '400px',
+            height: '400px',
+            background: 'radial-gradient(circle, rgba(230, 62, 21, 0.12) 0%, rgba(0,0,0,0) 70%)',
+          }}
+        />
+      </div>
 
       {/* Floating decorative badges from original template */}
       <div
@@ -53,11 +66,14 @@ export default function Hero() {
           opacity: 0.85,
         }}
         className="hero-badge-left"
+        aria-hidden="true"
       >
         <img
           src={badgeVertical}
-          alt="Decor"
-          style={{ width: '26px', height: 'auto', filter: 'drop-shadow(0 0 12px rgba(255,77,36,0.3))' }}
+          alt=""
+          width="26"
+          height="117"
+          style={{ width: '26px', height: 'auto', filter: 'drop-shadow(0 0 12px rgba(230,62,21,0.3))' }}
           onError={(e) => (e.target.style.display = 'none')}
         />
       </div>
@@ -72,11 +88,14 @@ export default function Hero() {
           opacity: 0.85,
         }}
         className="hero-badge-right"
+        aria-hidden="true"
       >
         <img
           src={badgeSmall}
-          alt="Badge"
-          style={{ width: '110px', height: 'auto', filter: 'drop-shadow(0 0 15px rgba(255,77,36,0.4))' }}
+          alt=""
+          width="110"
+          height="39"
+          style={{ width: '110px', height: 'auto', filter: 'drop-shadow(0 0 15px rgba(230,62,21,0.4))' }}
           onError={(e) => (e.target.style.display = 'none')}
         />
       </div>
@@ -249,12 +268,15 @@ export default function Hero() {
             >
               <img
                 src={heroAthlete}
-                alt="Total Fit Dubai Athlete Training"
+                alt="Haji Club Karachi Gym Fitness Athlete"
+                width="894"
+                height="675"
+                fetchPriority="high"
                 style={{
                   width: '100%',
                   height: 'auto',
                   objectFit: 'contain',
-                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.85)) drop-shadow(0 0 35px rgba(255, 77, 36, 0.25))',
+                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.85)) drop-shadow(0 0 35px rgba(230, 62, 21, 0.25))',
                   position: 'relative',
                   zIndex: 2,
                 }}

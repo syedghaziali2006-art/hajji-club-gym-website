@@ -41,7 +41,7 @@ export default function LocationsAndContact() {
               ))}
             </div>
             <span style={{ color: '#ffffff', fontWeight: 800, fontSize: '0.9rem' }}>4.3</span>
-            <span style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>
+            <span style={{ color: '#d1d5db', fontSize: '0.82rem' }}>
               (1,245+ Verified Google Reviews)
             </span>
           </div>
@@ -139,7 +139,7 @@ export default function LocationsAndContact() {
                   marginBottom: '1.5rem',
                 }}
               >
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                <div style={{ fontSize: '0.82rem', color: '#d1d5db', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
                   Street &amp; Chowrangi
                 </div>
                 <div style={{ color: '#ffffff', fontWeight: 600, fontSize: '0.98rem', lineHeight: 1.6 }}>
@@ -170,7 +170,7 @@ export default function LocationsAndContact() {
                   </div>
                   <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: 1.5, marginTop: '2px' }}>
                     Mon – Sat: 06:00 AM – 11:00 PM <br />
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+                    <span style={{ color: '#d1d5db', fontSize: '0.8rem' }}>
                       (Dedicated Male &amp; Female sections &amp; timings available)
                     </span>
                   </div>
@@ -231,14 +231,15 @@ export default function LocationsAndContact() {
                 href="https://api.whatsapp.com/send?text=Hello%20Haji%20Club!%20I%20want%20to%20inquire%20about%20membership%20and%20timings."
                 target="_blank"
                 rel="noreferrer"
+                aria-label="WhatsApp Haji Club Karachi"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '0.5rem',
                   background: '#25D366',
-                  color: '#ffffff',
-                  fontWeight: 800,
+                  color: '#0d1b10',
+                  fontWeight: 900,
                   fontSize: '0.88rem',
                   padding: '0.85rem 1.4rem',
                   borderRadius: '6px',
@@ -281,7 +282,7 @@ export default function LocationsAndContact() {
                 <div style={{ color: '#ffffff', fontWeight: 800, fontSize: '0.95rem' }}>
                   Waterpump Chowrangi, Block 13, Karachi
                 </div>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
+                <div style={{ color: '#d1d5db', fontSize: '0.8rem' }}>
                   Federal B Area, Gulberg Town
                 </div>
               </div>

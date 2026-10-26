@@ -131,11 +131,11 @@ export default function Pricing() {
                   style={{
                     display: 'inline-block',
                     fontFamily: 'var(--font-display)',
-                    fontSize: '0.8rem',
+                    fontSize: '0.82rem',
                     fontWeight: 800,
-                    letterSpacing: '0.1em',
+                    letterSpacing: '0.12em',
                     textTransform: 'uppercase',
-                    color: plan.popular ? 'var(--accent)' : 'var(--text-muted)',
+                    color: plan.popular ? 'var(--accent)' : '#d1d5db',
                     marginBottom: '0.4rem',
                   }}
                 >
@@ -187,11 +187,12 @@ export default function Pricing() {
                 ))}
               </div>
 
-              {/* CTA Action Button */}
+              {/* CTA Action Button with Unique Label for Accessibility */}
               <a
                 href={`https://api.whatsapp.com/send?phone=971565377884&text=${encodeURIComponent(plan.whatsappMsg)}`}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`Get ${plan.name} on WhatsApp`}
                 className={plan.popular ? 'btn-primary' : 'btn-secondary'}
                 style={{
                   width: '100%',

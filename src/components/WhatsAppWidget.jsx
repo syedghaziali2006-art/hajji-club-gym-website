@@ -96,6 +96,7 @@ export default function WhatsAppWidget() {
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(b.defaultMsg)}`}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`Inquire about ${b.name} on WhatsApp`}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -111,7 +112,7 @@ export default function WhatsAppWidget() {
               >
                 <div>
                   <div style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.9rem' }}>{b.name}</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ color: '#d1d5db', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     <MapPin size={11} color="var(--accent)" />
                     <span>{b.location}</span>
                   </div>
@@ -125,7 +126,7 @@ export default function WhatsAppWidget() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#ffffff',
+                    color: '#0d1b10',
                   }}
                 >
                   <Send size={15} />
@@ -140,11 +141,11 @@ export default function WhatsAppWidget() {
               textAlign: 'center',
               borderTop: '1px solid rgba(255, 255, 255, 0.06)',
               fontSize: '0.75rem',
-              color: 'var(--text-muted)',
+              color: '#d1d5db',
               background: '#161416',
             }}
           >
-            ⚡ Official Total Fit Dubai WhatsApp Support
+            ⚡ Official Haji Club Karachi WhatsApp Support
           </div>
         </div>
       )}

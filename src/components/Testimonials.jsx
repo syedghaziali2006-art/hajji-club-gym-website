@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import testimonialsBg from '../assets/testimonials-bg.jpg';
+import testimonialsBg from '../assets/testimonials-bg.webp';
 import { Quote, Star, ChevronLeft, ChevronRight, MapPin, CheckCircle } from 'lucide-react';
 
 export default function Testimonials() {
@@ -148,7 +148,7 @@ export default function Testimonials() {
                     <Star key={i} size={17} fill="#ffb703" color="#ffb703" />
                   ))}
                 </div>
-                <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{rev.date}</span>
+                <span style={{ fontSize: '0.78rem', color: '#d1d5db' }}>{rev.date}</span>
               </div>
 
               {/* Quote text */}
@@ -197,7 +197,7 @@ export default function Testimonials() {
                 </div>
 
                 <div>
-                  <h4
+                  <h3
                     style={{
                       fontFamily: 'var(--font-display)',
                       fontSize: '1.05rem',
@@ -207,7 +207,7 @@ export default function Testimonials() {
                     }}
                   >
                     {rev.name}
-                  </h4>
+                  </h3>
                   <div
                     style={{
                       display: 'flex',
@@ -232,8 +232,8 @@ export default function Testimonials() {
           <button
             onClick={() => setActiveIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
             style={{
-              width: '36px',
-              height: '36px',
+              width: '44px',
+              height: '44px',
               borderRadius: '50%',
               background: 'rgba(255, 255, 255, 0.06)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -245,7 +245,7 @@ export default function Testimonials() {
             }}
             aria-label="Previous Review"
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={20} />
           </button>
 
           {reviews.map((_, idx) => (
@@ -253,22 +253,36 @@ export default function Testimonials() {
               key={idx}
               onClick={() => setActiveIndex(idx)}
               style={{
-                width: idx === activeIndex ? '28px' : '10px',
-                height: '10px',
-                borderRadius: '999px',
-                background: idx === activeIndex ? 'var(--accent)' : 'rgba(255, 255, 255, 0.2)',
-                transition: 'all 0.3s ease',
+                minWidth: '44px',
+                minHeight: '44px',
+                padding: '12px 6px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'transparent',
+                border: 'none',
                 cursor: 'pointer',
               }}
               aria-label={`Go to review ${idx + 1}`}
-            />
+            >
+              <span
+                style={{
+                  display: 'block',
+                  width: idx === activeIndex ? '28px' : '10px',
+                  height: '10px',
+                  borderRadius: '999px',
+                  background: idx === activeIndex ? 'var(--accent)' : 'rgba(255, 255, 255, 0.3)',
+                  transition: 'all 0.3s ease',
+                }}
+              />
+            </button>
           ))}
 
           <button
             onClick={() => setActiveIndex((prev) => (prev + 1) % reviews.length)}
             style={{
-              width: '36px',
-              height: '36px',
+              width: '44px',
+              height: '44px',
               borderRadius: '50%',
               background: 'rgba(255, 255, 255, 0.06)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -280,7 +294,7 @@ export default function Testimonials() {
             }}
             aria-label="Next Review"
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>

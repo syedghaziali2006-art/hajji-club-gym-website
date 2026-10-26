@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 import { MapPin, Phone, Clock, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
         paddingTop: '5rem',
         paddingBottom: '2.5rem',
         position: 'relative',
-        color: 'var(--text-secondary)',
+        color: '#d1d5db',
       }}
     >
       <div className="container">
@@ -28,11 +28,13 @@ export default function Footer() {
         >
           {/* Column 1: Brand Info */}
           <div style={{ maxWidth: '340px' }}>
-            <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', textDecoration: 'none' }}>
+            <a href="#home" aria-label="Haji Club Homepage" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem', textDecoration: 'none' }}>
               <img
                 src={logoImg}
-                alt="Haji Club Gym & Fitness"
-                style={{ height: '56px', width: 'auto', objectFit: 'contain' }}
+                alt="Haji Club Logo"
+                width="168"
+                height="54"
+                style={{ height: '54px', width: 'auto', objectFit: 'contain' }}
               />
               <span
                 style={{
@@ -50,24 +52,59 @@ export default function Footer() {
               </span>
             </a>
 
-            <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text-secondary)', marginBottom: '1.75rem' }}>
-              Dubai's premier strength, hypertrophy, and lifestyle transformation gym. Featuring 7,000+ sq ft of
-              cutting-edge workout zones across Bur Dubai, Al Qusais, and Abu Hail.
+            <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: '#d1d5db', marginBottom: '1.75rem' }}>
+              Karachi's trusted strength, bodybuilding, and fitness club near Waterpump Chowrangi, Block 13 Federal B Area.
+              Vast workout floor, swimming pool, aerobics, and certified coaching.
             </p>
 
-            {/* Social Media Links */}
+            {/* Social Media Links with Discernible Names and High-Performance Inline SVGs */}
             <div style={{ display: 'flex', gap: '0.75rem' }}>
               {[
-                { icon: <i className="fab fa-instagram" style={{ fontSize: '18px' }}></i>, href: 'https://instagram.com' },
-                { icon: <i className="fab fa-facebook-f" style={{ fontSize: '17px' }}></i>, href: 'https://facebook.com' },
-                { icon: <i className="fab fa-twitter" style={{ fontSize: '17px' }}></i>, href: 'https://twitter.com' },
-                { icon: <i className="fab fa-youtube" style={{ fontSize: '17px' }}></i>, href: 'https://youtube.com' },
+                {
+                  name: 'Instagram',
+                  href: 'https://instagram.com',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                  ),
+                },
+                {
+                  name: 'Facebook',
+                  href: 'https://facebook.com',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                  ),
+                },
+                {
+                  name: 'Twitter',
+                  href: 'https://twitter.com',
+                  icon: (
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </svg>
+                  ),
+                },
+                {
+                  name: 'YouTube',
+                  href: 'https://youtube.com',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"></path>
+                    </svg>
+                  ),
+                },
               ].map((s, idx) => (
                 <a
                   key={idx}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={`Visit Haji Club on ${s.name}`}
                   style={{
                     width: '40px',
                     height: '40px',
@@ -194,7 +231,7 @@ export default function Footer() {
                 <Clock size={18} color="var(--accent)" style={{ flexShrink: 0, marginTop: '3px' }} />
                 <div>
                   <div style={{ color: '#fff', fontWeight: 600 }}>Open Today · Closes 11:00 PM</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>
+                  <div style={{ color: '#d1d5db', fontSize: '0.82rem' }}>
                     Monday – Saturday: 06:00 AM – 11:00 PM (Male &amp; Female Hours)
                   </div>
                 </div>
@@ -234,20 +271,20 @@ export default function Footer() {
             justifyContent: 'space-between',
             gap: '1rem',
             fontSize: '0.85rem',
-            color: 'var(--text-muted)',
+            color: '#d1d5db',
           }}
         >
           <div>
-            © {currentYear} <span style={{ color: '#fff', fontWeight: 700 }}>Total Fit Dubai</span>. All Rights Reserved.
+            © {currentYear} <span style={{ color: '#fff', fontWeight: 700 }}>Haji Club Gym &amp; Fitness</span>. All Rights Reserved.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a href="#home" style={{ color: 'var(--text-muted)' }}>
+            <a href="#home" style={{ color: '#d1d5db' }}>
               Privacy Policy
             </a>
-            <a href="#home" style={{ color: 'var(--text-muted)' }}>
+            <a href="#home" style={{ color: '#d1d5db' }}>
               Terms of Service
             </a>
-            <a href="#home" style={{ color: 'var(--text-muted)' }}>
+            <a href="#home" style={{ color: '#d1d5db' }}>
               Gym Rules
             </a>
           </div>

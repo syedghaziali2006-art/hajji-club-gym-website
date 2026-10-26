@@ -1,5 +1,4 @@
 import React from 'react';
-import gymFacility from '../assets/gym-facility-1.jpg';
 import { Maximize, Users, Target, Dumbbell, ArrowRight } from 'lucide-react';
 
 export default function WhyChooseUs() {
@@ -46,7 +45,7 @@ export default function WhyChooseUs() {
             WHY CHOOSE <span>US</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            Discover why Total Fit Dubai is the gym of choice for athletes, beginners, and fitness enthusiasts across Dubai.
+            Discover why Haji Club is the gym of choice for athletes, beginners, and fitness enthusiasts in Federal B Area, Karachi.
           </p>
         </div>
 

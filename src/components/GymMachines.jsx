@@ -1,7 +1,7 @@
 import React from 'react';
-import machineClose from '../assets/haji-machine-close.jpg';
-import gymFloor from '../assets/haji-gym-floor.jpg';
-import gymHall from '../assets/haji-gym-hall.jpg';
+import machineClose from '../assets/haji-machine-close.webp';
+import gymFloor from '../assets/haji-gym-floor.webp';
+import gymHall from '../assets/haji-gym-hall.webp';
 import { Dumbbell, Flame, CheckCircle, Sparkles, Eye, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function GymMachines() {
@@ -103,6 +103,9 @@ export default function GymMachines() {
                 <img
                   src={item.image}
                   alt={item.title}
+                  width="430"
+                  height="320"
+                  loading="lazy"
                   style={{
                     width: '100%',
                     height: '100%',

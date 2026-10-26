@@ -10,19 +10,19 @@
   --bg-card-hover: #262326;
   --bg-darker: #0c0a0c;
 
-  --accent: #ff4d24;
-  --accent-light: #ff6a47;
-  --accent-dark: #e03b14;
-  --accent-glow: rgba(255, 77, 36, 0.4);
-  --accent-subtle: rgba(255, 77, 36, 0.12);
+  --accent: #e63e15;
+  --accent-light: #ff5722;
+  --accent-dark: #cc330d;
+  --accent-glow: rgba(230, 62, 21, 0.4);
+  --accent-subtle: rgba(230, 62, 21, 0.14);
 
   --text-white: #ffffff;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(255, 77, 36, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(230, 62, 21, 0.4);
 
   --font-display: 'Montserrat', sans-serif;
   --font-subdisplay: 'Outfit', sans-serif;
@@ -37,8 +37,8 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 30px rgba(255, 77, 36, 0.25);
-  --shadow-glow-strong: 0 0 50px rgba(255, 77, 36, 0.45);
+  --shadow-glow: 0 0 30px rgba(230, 62, 21, 0.3);
+  --shadow-glow-strong: 0 0 50px rgba(230, 62, 21, 0.5);
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -243,6 +243,11 @@ button {
   transform: translateY(-2px);
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* Ambient glow orb utility */
 .ambient-glow {
   position: absolute;
@@ -254,6 +259,8 @@ button {
   pointer-events: none;
   z-index: 0;
   opacity: 0.25;
+  contain: strict;
+  transform: translateZ(0);
 }
 
 /* Animations */

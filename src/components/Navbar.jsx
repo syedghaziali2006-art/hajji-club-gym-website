@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 import { Menu, X, Phone, ArrowUpRight, MapPin } from 'lucide-react';
 
 export default function Navbar() {
@@ -57,6 +57,7 @@ export default function Navbar() {
           {/* 1. Brand Logo */}
           <a
             href="#home"
+            aria-label="Haji Club Gym Homepage"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -66,7 +67,9 @@ export default function Navbar() {
           >
             <img
               src={logoImg}
-              alt="Haji Club Gym & Fitness"
+              alt="Haji Club Logo"
+              width="168"
+              height="54"
               style={{
                 height: isScrolled ? '46px' : '54px',
                 width: 'auto',
