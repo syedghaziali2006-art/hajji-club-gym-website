@@ -32,8 +32,10 @@ export default function Footer() {
               <img
                 src={logoImg}
                 alt="Haji Club Logo"
-                width="168"
-                height="54"
+                width="240"
+                height="192"
+                loading="lazy"
+                decoding="async"
                 style={{ height: '54px', width: 'auto', objectFit: 'contain' }}
               />
               <span

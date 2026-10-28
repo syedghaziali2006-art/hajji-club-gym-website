@@ -68,8 +68,9 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="Haji Club Logo"
-              width="168"
-              height="54"
+              width="240"
+              height="192"
+              decoding="async"
               style={{
                 height: isScrolled ? '46px' : '54px',
                 width: 'auto',

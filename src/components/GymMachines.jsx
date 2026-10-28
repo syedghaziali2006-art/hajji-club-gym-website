@@ -106,6 +106,7 @@ export default function GymMachines() {
                   width="430"
                   height="320"
                   loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -257,7 +258,7 @@ export default function GymMachines() {
               “The one and only gym that I love due to its vast area, amazing trainers and varieties of different machines
               for each and every single muscle in the body — with nominal and affordable fees!”
             </p>
-            <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 600, marginTop: '0.5rem', display: 'inline-block' }}>
+            <span style={{ color: '#cbd5e1', fontSize: '0.85rem', fontWeight: 600, marginTop: '0.5rem', display: 'inline-block' }}>
               — Mr. Mohsin, Local Guide (Google Verified Review)
             </span>
           </div>

@@ -73,6 +73,8 @@ export default function Hero() {
           alt=""
           width="26"
           height="117"
+          loading="lazy"
+          decoding="async"
           style={{ width: '26px', height: 'auto', filter: 'drop-shadow(0 0 12px rgba(230,62,21,0.3))' }}
           onError={(e) => (e.target.style.display = 'none')}
         />
@@ -95,6 +97,8 @@ export default function Hero() {
           alt=""
           width="110"
           height="39"
+          loading="lazy"
+          decoding="async"
           style={{ width: '110px', height: 'auto', filter: 'drop-shadow(0 0 15px rgba(230,62,21,0.4))' }}
           onError={(e) => (e.target.style.display = 'none')}
         />
@@ -201,7 +205,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.88rem' }}>4.3 ★ (1,245 Reviews)</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Google Verified</div>
+                  <div style={{ color: '#cbd5e1', fontSize: '0.78rem' }}>Google Verified</div>
                 </div>
               </div>
 
@@ -222,7 +226,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.88rem' }}>Gym &amp; Swimming Pool</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Aerobics &amp; Yoga</div>
+                  <div style={{ color: '#cbd5e1', fontSize: '0.78rem' }}>Aerobics &amp; Yoga</div>
                 </div>
               </div>
 
@@ -243,7 +247,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.88rem' }}>Near Waterpump</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Block 13, F.B. Area, Karachi</div>
+                  <div style={{ color: '#cbd5e1', fontSize: '0.78rem' }}>Block 13, F.B. Area, Karachi</div>
                 </div>
               </div>
             </div>
@@ -269,9 +273,11 @@ export default function Hero() {
               <img
                 src={heroAthlete}
                 alt="Haji Club Karachi Gym Fitness Athlete"
-                width="894"
-                height="675"
-                fetchPriority="high"
+                width="820"
+                height="619"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: 'auto',

@@ -50,9 +50,10 @@ export default function AboutUs() {
               <img
                 src={aboutGym}
                 alt="Haji Club Gym Interior and Workout Zones"
-                width="600"
-                height="469"
+                width="750"
+                height="587"
                 loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: 'auto',
@@ -86,9 +87,10 @@ export default function AboutUs() {
                 src={bodybuilderCutout}
                 alt=""
                 aria-hidden="true"
-                width="400"
-                height="400"
+                width="199"
+                height="380"
                 loading="lazy"
+                decoding="async"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
                 onError={(e) => (e.target.style.display = 'none')}
               />

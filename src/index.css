@@ -10,23 +10,23 @@
   --bg-card-hover: #262326;
   --bg-darker: #0c0a0c;
 
-  --accent: #e63e15;
-  --accent-light: #ff5722;
-  --accent-dark: #cc330d;
-  --accent-glow: rgba(230, 62, 21, 0.4);
-  --accent-subtle: rgba(230, 62, 21, 0.14);
+  --accent: #ff5722;
+  --accent-light: #ff7043;
+  --accent-dark: #e64a19;
+  --accent-glow: rgba(255, 87, 34, 0.4);
+  --accent-subtle: rgba(255, 87, 34, 0.14);
 
   --text-white: #ffffff;
   --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
 
   --border-subtle: rgba(255, 255, 255, 0.1);
-  --border-accent: rgba(230, 62, 21, 0.4);
+  --border-accent: rgba(255, 87, 34, 0.4);
 
-  --font-display: 'Montserrat', sans-serif;
-  --font-subdisplay: 'Outfit', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-subdisplay: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 10px;

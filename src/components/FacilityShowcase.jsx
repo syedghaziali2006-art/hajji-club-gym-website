@@ -19,9 +19,10 @@ export default function FacilityShowcase() {
           <img
             src={facilityImg}
             alt="Haji Club Gym Facility and Workout Floor"
-            width="1200"
-            height="520"
+            width="980"
+            height="610"
             loading="lazy"
+            decoding="async"
             style={{
               width: '100%',
               maxHeight: '520px',
